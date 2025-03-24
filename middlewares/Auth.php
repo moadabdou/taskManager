@@ -5,7 +5,7 @@ class AuthMiddleware implements Middleware{
         if (isset($_SESSION["user_id"])){
             $req["is_auth"] = true;
         }else {
-            header("Location: /phpLearning/taskManager/");
+            header("Location: ".BASE_URL);
             exit();
         }
         return $req;
